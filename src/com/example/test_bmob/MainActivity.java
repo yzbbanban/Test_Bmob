@@ -6,6 +6,7 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -35,8 +36,9 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-
+				startActivity(new Intent(MainActivity.this,
+						LoginActivity.class));
+				finish();
 			}
 		});
 		btnRegist.setOnClickListener(new OnClickListener() {
@@ -72,6 +74,7 @@ public class MainActivity extends Activity {
 							// ×¢²á³É¹¦
 							Toast.makeText(MainActivity.this, "×¢²á³É¹¦",
 									Toast.LENGTH_SHORT).show();
+							
 						} else {
 							Toast.makeText(MainActivity.this,
 									"×¢²áÊ§°Ü" + arg1.getMessage(),
