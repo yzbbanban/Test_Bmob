@@ -22,4 +22,9 @@ public class ContentEntity extends BmobObject {
 		this.content = content;
 	}
 
+	@Override
+	public String toString() {
+		return "ContentEntity [title=" + title + ", content=" + content + "]";
+	}
+
 }
